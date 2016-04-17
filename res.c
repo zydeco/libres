@@ -280,7 +280,7 @@ RFILE* res_load (RFILE *rp) {
     uint8_t *names = ((void*)map)+ntohs(map->nameListOffset);
     
     // read types
-    rp->numTypes = 1+ntohs(types->count);
+    rp->numTypes = 1+(int16_t)ntohs(types->count);
     rp->types = calloc(rp->numTypes, sizeof(struct RmType));
     if (rp->types == NULL) egoto(ENOMEM, error);
     bzero(rp->types, sizeof(struct RmType) * rp->numTypes);

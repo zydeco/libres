@@ -68,13 +68,13 @@ struct __attribute__ ((__packed__)) RfMap {
 struct __attribute__ ((__packed__)) RfTypeEntry {
     // resource type entry
     uint32_t        type;   // resource type
-    uint16_t        count;  // number of resources minus one
+    int16_t         count;  // number of resources minus one
     uint16_t        offset; // offset to ref list from type list 
 };
 
 struct __attribute__ ((__packed__)) RfTypeList {
     // resource type list
-    uint16_t            count;  // minus one
+    int16_t             count;  // minus one
     struct RfTypeEntry  entry[];
 };
 
