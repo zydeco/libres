@@ -53,6 +53,7 @@ RFILE* res_open (const char *path, int mode) {
 }
 
 RFILE* res_open_mem (void *buf, size_t size, int copy) {
+    if (buf == NULL) return NULL;
     RFILE* rp = malloc(sizeof(RFILE));
     if (rp == NULL) efail(ENOMEM);
     bzero(rp, sizeof(RFILE));
