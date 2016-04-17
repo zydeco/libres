@@ -27,7 +27,7 @@
 #include "res.h"
 #include "libres_internal.h"
 
-const char * libres_id = "libres 1.0.0 (C)2008-2009 namedfork.net";
+const char * libres_id = "libres 1.0.1 (C)2008-2016 namedfork.net";
 
 RFILE* res_open (const char *path, int mode) {
     if (mode != 0) efail(EINVAL);
